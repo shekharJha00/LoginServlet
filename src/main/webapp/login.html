@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="US-ASCII">
+    <title>Login Page</title>
+</head>
+<style>
+    form{
+        padding:15px;
+        width:100%;
+    }
+    .login-box{
+        width:30%;
+        border:1px black solid;
+        margin-left:440px;
+        margin-top:100px;
+        background-color: #d6ffe1;
+    }
+    input{
+        width:200px;
+        padding:10px;
+    }
+    h1{
+        padding:10px;
+        color: #827fff;
+        font-family: "JetBrains Mono ExtraBold";
+    }
+    button{
+        background-color: #44ff8c;
+    }
+
+
+</style>
+<body>
+<form class="login-box" action="LoginServlet" method="post" >
+    <h1>Login Page</h1>
+    Username: <input type="text" name="user">
+    <br>
+    <br>
+    Password: <input type="password" name="pwd">
+    <br>
+    <br>
+    <button class="button">LOG IN</button>
+</form>
+
+</body>
+<script>
+    function validation(name) {
+            let nameRegex = RegExp('^[A-Z]{}[a-zA-Z\\s]{2,}$');
+            if(nameRegex.test(name))
+                this.name = name;
+            else throw 'Incorrect Name';
+    }
+</script>
+</html>
